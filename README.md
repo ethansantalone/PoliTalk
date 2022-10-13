@@ -5,4 +5,4 @@ The video communication code was sourced from adrianhajdin on github. They used 
 
 Setup:
 - run ```n v16``` to switch to node version 16, a version shown to successfully install and run the application
-- run ```npm i && npm start``` for both client side (project_video_chat/client) and server side (/project_video_chat) to start the development server
+- run ```npm i && npm start``` for both client side (/project_video_chat/client) and server side (/project_video_chat) to start the development server
