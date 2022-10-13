@@ -1,6 +1,5 @@
 ## PoliTalk Debate Platform
 
-##
 The video communication cde was sourced from adrianhajdin on github. They used WebRTC and their repo can be found here:
 - https://github.com/adrianhajdin/project_video_chat
 
