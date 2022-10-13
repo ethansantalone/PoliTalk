@@ -1,11 +1,9 @@
-# Realtime Chat Application
+## PoliTalk Debate Platform
 
-![Video Chat](https://i.ibb.co/7WZRLD1/122.jpg)
-
-## Introduction
-This is a code repository for the corresponding video tutorial. 
-
-In this tutorial, we're going to build and deploy a React Video Chat Application using WebRTC.
+##
+The video communication cde was sourced from adrianhajdin on github. They used WebRTC and their repo can be found here:
+- https://github.com/adrianhajdin/project_video_chat
 
 Setup:
+- run ```n v16``` to switch to node version 16, a version shown to successfully install and run the application
 - run ```npm i && npm start``` for both client and server side to start the development server
