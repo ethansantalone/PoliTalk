@@ -69,16 +69,16 @@ const App = () => {
       <div className={classes.stats_parent}>
         <div className={classes.stats_child}>
           <Typography gutterBottom variant="h5">Pro Choice</Typography>
-          <a href="https://web.mit.edu/pro-choice/www/facts.html">MIT Pro Choice</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://web.mit.edu/pro-choice/www/facts.html">MIT Pro Choice</a>
         </div>
         <div className={classes.stats_child}>
           <Typography gutterBottom variant="h5">Neutral</Typography>
-          <a href="https://www.cdc.gov/reproductivehealth/data_stats/abortion.htm">CDC Statistics</a>
-          <a href="https://www.who.int/news-room/fact-sheets/detail/abortion">World Health Organization</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.cdc.gov/reproductivehealth/data_stats/abortion.htm">CDC Statistics</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://www.who.int/news-room/fact-sheets/detail/abortion">World Health Organization</a>
         </div>
         <div className={classes.stats_child}>
           <Typography gutterBottom variant="h5">Anti Abortion</Typography>
-          <a href="https://abort73.com/abortion_facts/us_abortion_statistics/">Abort 73</a>
+          <a target="_blank" rel="noopener noreferrer" href="https://abort73.com/abortion_facts/us_abortion_statistics/">Abort 73</a>
         </div>
       </div>
     </div>
