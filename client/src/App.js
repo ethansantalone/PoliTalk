@@ -30,6 +30,21 @@ const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
     width: '100%',
   },
+  stats_parent: {
+    display: 'flex',
+    flexDirection: 'row',
+  },
+  stats_child: {
+    borderRadius: 15,
+    margin: '10px 20px',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '500px',
+    border: '2px solid black',
+    background: 'white',
+  },
 }));
 
 const App = () => {
@@ -44,6 +59,17 @@ const App = () => {
       <Sidebar>
         <Notifications />
       </Sidebar>
+      <div className={classes.stats_parent}>
+        <div className={classes.stats_child}>
+          <Typography gutterBottom variant="h5">Pro Choice</Typography>
+        </div>
+        <div className={classes.stats_child}>
+          <Typography gutterBottom variant="h5">Neutral</Typography>
+        </div>
+        <div className={classes.stats_child}>
+          <Typography gutterBottom variant="h5">Anti Abortion</Typography>
+        </div>
+      </div>
     </div>
   );
 };
