@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
   },
   container: {
     width: '600px',
-    margin: '35px 0',
+    margin: '10px 0',
     padding: 0,
     [theme.breakpoints.down('xs')]: {
       width: '80%',
@@ -33,7 +33,6 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     padding: '5px 20px',
-    border: '2px solid black',
   },
 }));
 
