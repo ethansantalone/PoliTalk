@@ -57,7 +57,6 @@ const useStyles = makeStyles((theme) => ({
 const Room = (props) => {
   const classes = useStyles();
   const myProps = props;
-  console.log(props);
 
   return (
     <div className={classes.wrapper}>
