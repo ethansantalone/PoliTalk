@@ -1,86 +1,53 @@
 import React from 'react';
-import { Typography, AppBar } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
-
-import VideoPlayer from './components/VideoPlayer';
-import Sidebar from './components/Sidebar';
-import Notifications from './components/Notifications';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+import Room from './components/Room';
 
-const useStyles = makeStyles((theme) => ({
-  appBar: {
-    marginBottom: '10px',
-    paddingTop: '5px',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '100%',
-    backgroundColor: 'white',
-
-    [theme.breakpoints.down('xs')]: {
-      width: '90%',
-    },
-  },
-  image: {
-    marginLeft: '15px',
-  },
-  wrapper: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    width: '100%',
-  },
-  stats_parent: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  stats_child: {
-    borderRadius: 5,
-    margin: '10px 10px',
-    padding: '20px',
-    paddingTop: '5px',
-    paddingBottom: '35px',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: '20%',
-    background: 'white',
-  },
-}));
+const abortionProps = {
+  proHeader: 'Pro Choice',
+  neutralHeader: 'Neutral',
+  conHeader: 'Pro Life',
+  proLinks: ['https://web.mit.edu/pro-choice/www/facts.html'],
+  proLinkNames: ['MIT Pro Choice'],
+  neutralLinks: ['https://www.cdc.gov/reproductivehealth/data_stats/abortion.htm', 'https://www.who.int/news-room/fact-sheets/detail/abortion'],
+  neutralLinkNames: ['CDC Statistics', 'World Health Organization'],
+  conLinks: ['https://abort73.com/abortion_facts/us_abortion_statistics/'],
+  conLinkNames: ['Abort 73'],
+};
+const immigrationProps = {
+  proHeader: 'Pro Immigration',
+  neutralHeader: 'Neutral',
+  conHeader: 'Anti Immigration',
+  proLinks: ['https://www.fwd.us/news/immigration-facts-the-positive-economic-impact-of-immigration/', 'https://www.epi.org/publication/immigration-facts/'],
+  proLinkNames: ['FWD Economic Impact', 'Economic Policy Institute'],
+  neutralLinks: ['https://www.pewresearch.org/fact-tank/2020/08/20/key-findings-about-u-s-immigrants/'],
+  neutralLinkNames: ['PEW Research'],
+  conLinks: ['https://www.fairus.org/issues/illegal-immigration?gclid=Cj0KCQjwteOaBhDuARIsADBqRegaG6eTbDV2VpyfUodqy8euvPvQc54GhV2pzpQe9m7SSqngHov1B9saApYKEALw_wcB', 'https://www.fairus.org/issue/illegal-immigration/whats-wrong-illegal-immigration'],
+  conLinkNames: ['FAIR Fast Facts', 'FAIR Costs of Immigration'],
+};
+const gunControlProps = {
+  proHeader: 'Pro Gun Control',
+  neutralHeader: 'Neutral',
+  conHeader: 'Anti Gun Control',
+  proLinks: ['https://www.npr.org/2022/05/27/1101774780/gun-control-debate-statistics', 'https://www.amnesty.org/en/what-we-do/arms-control/gun-violence/'],
+  proLinkNames: ['NPR Stats', 'Amnesty Gun Violence'],
+  neutralLinks: ['https://gun-control.procon.org/'],
+  neutralLinkNames: ['Procon'],
+  conLinks: ['https://www.americas1stfreedom.org/content/17-inconvenient-facts-for-the-gun-control-movement/', 'https://www.nraila.org/why-gun-control-doesn-t-work/'],
+  conLinkNames: ['America\'s 1st Freedom', 'NRA ILA'],
+};
 
 const App = () => {
-  const classes = useStyles();
-
+  const temp = 0;
   return (
-    <div className={classes.wrapper}>
-      <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography variant="h2" align="center">PoliTalk</Typography>
-      </AppBar>
-      <VideoPlayer />
-      <Sidebar>
-        <Notifications />
-      </Sidebar>
-      <div className={classes.stats_parent}>
-        <div className={classes.stats_child}>
-          <Typography gutterBottom variant="h5">Pro Choice</Typography>
-          <a target="_blank" rel="noopener noreferrer" href="https://web.mit.edu/pro-choice/www/facts.html">MIT Pro Choice</a>
-        </div>
-        <div className={classes.stats_child}>
-          <Typography gutterBottom variant="h5">Neutral</Typography>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.cdc.gov/reproductivehealth/data_stats/abortion.htm">CDC Statistics</a>
-          <a target="_blank" rel="noopener noreferrer" href="https://www.who.int/news-room/fact-sheets/detail/abortion">World Health Organization</a>
-        </div>
-        <div className={classes.stats_child}>
-          <Typography gutterBottom variant="h5">Anti Abortion</Typography>
-          <a target="_blank" rel="noopener noreferrer" href="https://abort73.com/abortion_facts/us_abortion_statistics/">Abort 73</a>
-        </div>
-      </div>
+    <div props={temp}>
+      <Router>
+        <Routes>
+          <Route path="/abortion" element={<Room props={abortionProps} />} />
+          <Route path="/guncontrol" element={<Room props={gunControlProps} />} />
+          <Route path="/immigration" element={<Room props={immigrationProps} />} />
+        </Routes>
+      </Router>
     </div>
   );
 };
