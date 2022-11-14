@@ -1,7 +1,6 @@
 import React from 'react';
-import { Typography, AppBar } from '@material-ui/core';
+import { Typography, AppBar, Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-
 import VideoPlayer from './VideoPlayer';
 import Sidebar from './Sidebar';
 import Notifications from './Notifications';
@@ -81,6 +80,9 @@ const Room = (props) => {
           {myProps.props.conLinks.map((link, index) => <a target="_blank" rel="noopener noreferrer" href={link}>{myProps.props.conLinkNames[index]}</a>)}
         </div>
       </div>
+      <Button variant="contained" color="primary" fullWidth onClick={() => { window.location = 'https://forms.gle/W7yD1tCHNgzvML4L6'; }} className={classes.margin}>
+        Finish Debate
+      </Button>
     </div>
   );
 };
